@@ -23,14 +23,6 @@ ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            /*using var tracerProvider = Sdk.CreateTracerProviderBuilder()
-            .SetSampler(new AlwaysOnSampler())
-            .AddSource("MyCompany.MyProduct.MyLibrary")
-            .AddHttpClientInstrumentation()
-            .AddConsoleExporter()
-            .Build();
-            */
-
             // string name = req.Query["name"];
 
             // string requestBody = await new StreamReader(req.Body).ReadToEndAsync();

@@ -36,11 +36,11 @@ ILogger log)
             // string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             // dynamic data = JsonConvert.DeserializeObject(requestBody);
 
-            string eventNames = string.Empty;
+            var eventNames = new List<string>();
 
             Action<KeyValuePair<string, object>> callback = (KeyValuePair<string, object> evnt) =>
             {
-                eventNames += evnt.Key + "\n";
+                eventNames.Add(evnt.Key);
                 Console.WriteLine($"{evnt.Key} {evnt.Value}");
                 Console.WriteLine($"Activity.Current.Id: {Activity.Current?.Id}");
                 Console.WriteLine($"Activity.Current.ParentId: {Activity.Current?.ParentId}");
